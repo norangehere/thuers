@@ -1,0 +1,24 @@
+/* Keep ZJUers' original layout, dimensions, colors and link treatment. */
+.dhname{margin-top:0;line-height:1.5}
+.engine-toggle{padding:0;border:0;background:#fff;display:grid;place-items:center}
+.engine-toggle img{width:41px;height:41px;object-fit:contain}
+#engine-letter{font-size:23px;font-weight:600;color:#459df5}
+.search-engine:not([hidden]){display:block}
+.search-engine-list{display:flow-root;margin-bottom:0}
+.search-engine-list li{padding:0}
+.search-engine-list button{font:inherit;color:inherit;display:block;width:100%;border:0;background:none;padding:5px 10px;text-align:left;cursor:pointer}
+.search-engine-list button:hover{background:#eef6ff;color:#459df5}
+[hidden]{display:none!important}
+.search-input{min-width:0;background:#fff}
+a:focus-visible,button:focus-visible{outline:2px solid #459df5;outline-offset:2px}
+@media(max-width:767px){.search-btn{width:56px}.dh a{font-size:13px}.dh a:hover{font-size:13px}}
+@media(prefers-reduced-motion:reduce){header .logo img{animation:none!important}*{transition:none!important}}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(min-width:992px){.row.dh>div:nth-child(3n+1),.row.dh>section:nth-child(3n+1){clear:left}}
+@media(min-width:768px) and (max-width:991px){.row.dh>div:nth-child(2n+1),.row.dh>section:nth-child(2n+1){clear:left}}
+/* Original 5-column icon menu, wrapping to 3 columns on smaller screens. */
+.search-engine-list button{line-height:30px;white-space:nowrap}
+.search-clear:not([hidden]){display:block}
+.search-clear{border:0;padding:0;background:none;width:24px;height:26px;line-height:24px;right:89px;top:25px;margin-top:-13px;font-size:23px;color:#999}
+.search-input{padding-right:34px}
+@media(max-width:767px){.search-clear{right:65px}.search-engine-list li{width:calc((100% - 30px)/3)}}
