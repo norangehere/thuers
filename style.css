@@ -23,3 +23,25 @@ a:focus-visible,button:focus-visible{outline:2px solid #459df5;outline-offset:2p
 .search-input{padding-right:34px}
 @media(max-width:767px){.search-clear{right:65px}.search-engine-list li{width:calc((100% - 30px)/3)}}
 .dh a.compact-link,.dh a.compact-link:hover{font-size:12px;white-space:nowrap}
+/* Theme control stays in the original navigation cell without leaving THUers. */
+.theme-toggle{display:block;width:100%;border:0;padding:0;border-radius:2px;background:#fff;color:#808080;text-align:center;font-family:inherit;font-size:14px;line-height:45px;cursor:pointer;transition:all .3s ease}
+.theme-toggle:hover{background:#459df5;color:#fff;font-size:16px;font-weight:bold}
+:root{color-scheme:light}
+:root[data-theme="dark"]{color-scheme:dark}
+[data-theme="dark"] body{background:#181a1d;color:#d8dadd}
+[data-theme="dark"] header,[data-theme="dark"] header .logo{background:#22252a;border-color:#353941}
+[data-theme="dark"] header .logo a{color:#e3e5e8}
+[data-theme="dark"] .dhname{color:#bfc3ca}
+[data-theme="dark"] .dh a,[data-theme="dark"] .theme-toggle{background:#292d33;color:#c9cdd4}
+[data-theme="dark"] .dh a:hover,[data-theme="dark"] .theme-toggle:hover{background:#347abf;color:#fff}
+[data-theme="dark"] .search-box{border-color:#41464f;background:#292d33}
+[data-theme="dark"] .search-input,[data-theme="dark"] .search-btn{background:#292d33;color:#e3e5e8}
+[data-theme="dark"] .search-input::placeholder{color:#b0b6c0}
+[data-theme="dark"] .search-btn{color:#86bff1;border-color:#41464f}
+[data-theme="dark"] .search-clear{color:#bfc3ca}
+[data-theme="dark"] .search-engine{background:#22252a;box-shadow:0 5px 20px #0006}
+[data-theme="dark"] .search-engine-tit{color:#bfc3ca}
+[data-theme="dark"] .search-engine-list li{background:#30353c;color:#d1d5dc}
+[data-theme="dark"] .search-engine-list button:hover{background:#3b4552;color:#a3d0fa}
+[data-theme="dark"] .search-engine ul::before{border-bottom-color:#22252a}
+@media(max-width:767px){.theme-toggle,.theme-toggle:hover{font-size:13px}}

@@ -31,3 +31,18 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!panel.hidd
 input.addEventListener('input',()=>{clear.hidden=!input.value});
 clear.addEventListener('click',()=>{input.value='';clear.hidden=true;input.focus()});
 form.addEventListener('submit',event=>{event.preventDefault();if(!input.value.trim()){input.focus();return}window.open(searchEngines[selected].url+encodeURIComponent(input.value),'_blank','noopener,noreferrer');closeEngines()});
+
+const themeToggle=document.querySelector('#theme-toggle');
+function updateThemeToggle(){
+ const dark=document.documentElement.dataset.theme==='dark';
+ themeToggle.textContent=dark?'# 浅色模式 #':'# 深色模式 #';
+ themeToggle.setAttribute('aria-label',dark?'切换浅色模式':'切换深色模式');
+ themeToggle.setAttribute('aria-pressed',String(dark));
+}
+updateThemeToggle();
+themeToggle.addEventListener('click',()=>{
+ const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';
+ document.documentElement.dataset.theme=theme;
+ try{localStorage.setItem('thuers-theme',theme)}catch{}
+ updateThemeToggle();
+});
